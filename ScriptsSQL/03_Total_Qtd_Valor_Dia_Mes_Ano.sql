@@ -1,0 +1,13 @@
+-- Quantidade e valor das vendas por dia, mes, ano.
+-- Adicionado: Ordenacao Ano, Mes e ValorTotal, demonstrando o dia com maior venda no Mes.
+
+SELECT
+    YEAR(FC.DATA) AS ANO,
+    MONTH(FC.DATA) AS MES,
+    DAY(FC.DATA) AS DIA,
+    SUM(FD.QUANTIDADE) AS TOTAL_QTD,
+    SUM(FD.VALOR) AS TOTAL_VALOR
+FROM FAT_CABECALHO FC
+INNER JOIN FAT_DETALHES FD ON FC.CUPOMID = FD.CUPOMID
+GROUP BY YEAR(FC.DATA), MONTH(FC.DATA), DAY(FC.DATA)
+ORDER BY YEAR(FC.DATA) DESC, MONTH(FC.DATA), TOTAL_VALOR DESC
