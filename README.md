@@ -15,7 +15,7 @@
 
 <img src="./ScriptsSQL_Images/Analise_Tabelas_Modelagem_SQL.png" width="600" height="280px">
 
-#### 3. Iniciei o teste criando uma view dimensão produto par a integrar as informações de Produto e Categoria.
+#### 3. Iniciei o teste criando uma view dimensão produto para integrar as informações de Produto e Categoria (Dim_Produtos).
 
 ## Perguntas que precisam ser respondidas:
 
